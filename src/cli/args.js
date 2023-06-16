@@ -9,8 +9,9 @@ const parseArgs = () => {
     const resData = result
         .join(' ')
         .split(',')
-    console.log(resData
-        .slice(0 , resData.length - 1))
+    for(let data of resData){
+        console.log(data)
+    }
 };
 
 parseArgs();
