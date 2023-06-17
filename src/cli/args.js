@@ -4,14 +4,10 @@ const parseArgs = () => {
     const result = args
         .map( (arg) => arg
             .startsWith('--') ?
-            arg.replace('--', ''): `is ${arg},`);
+            arg.replace('--', ''): `is ${arg}`);
 
-    const resData = result
-        .join(' ')
-        .split(',')
-    for(let data of resData){
-        console.log(data)
-    }
+    const resData = result.join(', ')
+    console.log(resData)
 };
 
 parseArgs();
