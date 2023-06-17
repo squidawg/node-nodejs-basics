@@ -1,5 +1,13 @@
 const parseArgs = () => {
-    // Write your code here 
+    const args = process.argv.slice(2);
+
+    const result = args
+        .map( (arg) => arg
+            .startsWith('--') ?
+            arg.replace('--', ''): `is ${arg}`);
+
+    const resData = result.join(', ')
+    console.log(resData)
 };
 
 parseArgs();
